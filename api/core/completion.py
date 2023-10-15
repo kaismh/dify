@@ -167,7 +167,7 @@ class Completion:
                 memory=memory
             )
         else:
-            prompt_messages = model_instance.get_advanced_prompt(
+            prompt_messages = model_instance.get_advanced_prompt_v2(
                 app_mode=mode,
                 app_model_config=app_model_config,
                 inputs=inputs,
