@@ -1,0 +1,14 @@
+name: Mirror Upstream
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs hourly
+  workflow_dispatch:      # Also allows manual trigger
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone upstream repository
+        run: |
+          git clone --mirror https://github.com/langgenius/dify.git mirror
